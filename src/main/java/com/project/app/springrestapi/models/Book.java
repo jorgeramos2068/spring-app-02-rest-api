@@ -12,23 +12,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "user")
+@Table(name = "book")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Book {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(unique = true, nullable = false)
   private Long id;
 
-  @Column(name = "email")
-  private String email;
+  @Column(name = "title")
+  private String title;
 
-  @Column(name = "first_name")
-  private String firstName;
+  @Column(name = "publication_date")
+  private String publicationDate;
 
-  @Column(name = "last_name")
-  private String lastName;
+  @Column(name = "category")
+  private String category;
+
+  @Column(name = "total_pages")
+  private String totalPages;
 }
